@@ -26,12 +26,14 @@ public class GameController {
 
     public void play(){
         inputManager.printGameStartMessage();
-        boolean token = true;
 
+        boolean token = true;
         while(token){
+
             boolean win = false;
+            answerNumber = randomNumberGenarator.generateRandNum();
+
             while(!win){
-                answerNumber = randomNumberGenarator.generateRandNum();
                 List<Integer> playerGuess = inputManager.printAnswerRecieveMessage();
                 List<Integer> score = scoreValidator.validateAnswer(answerNumber,playerGuess);
                 resultView.printScore(score);
