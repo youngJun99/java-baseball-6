@@ -25,7 +25,7 @@ public class InputManager {
         else  return false;
     }
 
-    public List<Integer> printStartMessage(){
+    public List<Integer> printAnswerRecieveMessage(){
         System.out.println(ANSWER_RECIEVE_MESSAGE);
         String answerRecieved = Console.readLine();
         return validateGameNum(answerRecieved);
