@@ -1,7 +1,20 @@
 package baseball;
 
+import baseball.controller.GameController;
+import baseball.controller.InputManager;
+import baseball.domain.game.RandomNumberGenarator;
+import baseball.domain.game.ScoreValidator;
+import baseball.view.ResultView;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        GameController gameController = new GameController(
+                new InputManager(),
+                new RandomNumberGenarator(),
+                new ScoreValidator(),
+                new ResultView());
+
+        gameController.play();
+
     }
 }
