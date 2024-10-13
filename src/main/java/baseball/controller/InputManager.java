@@ -17,11 +17,12 @@ public class InputManager {
         System.out.println(GAME_START_MESSAGE);
     }
 
-    public String printRestartMessage(){
+    public boolean printRestartMessage(){
         System.out.println(GAME_RESTART_MESSAGE);
         String restartNum = Console.readLine();
         validateRestartNum(restartNum);
-        return restartNum;
+        if(restartNum == "1") return true;
+        else  return false;
     }
 
     public List<Integer> printStartMessage(){
