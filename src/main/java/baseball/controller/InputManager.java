@@ -21,7 +21,7 @@ public class InputManager {
         System.out.println(GAME_RESTART_MESSAGE);
         String restartNum = Console.readLine();
         validateRestartNum(restartNum);
-        if(restartNum == "1") return true;
+        if(restartNum.equals("1")) return true;
         else  return false;
     }
 
