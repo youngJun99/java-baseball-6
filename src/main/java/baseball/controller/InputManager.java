@@ -13,32 +13,31 @@ public class InputManager {
     private final static String GAME_RESTART_MESSAGE = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
     public static int GAME_LENGTH = 3;
 
-    public void printGameStartMessage(){
+    public void printGameStartMessage() {
         System.out.println(GAME_START_MESSAGE);
     }
 
-    public boolean printRestartMessage(){
+    public boolean printRestartMessage() {
         System.out.println(GAME_RESTART_MESSAGE);
         String restartNum = Console.readLine();
         validateRestartNum(restartNum);
-        if(restartNum.equals("1")) return true;
-        else  return false;
+        return restartNum.equals("1");
     }
 
-    public List<Integer> printAnswerRecieveMessage(){
+    public List<Integer> printAnswerRecieveMessage() {
         System.out.println(ANSWER_RECIEVE_MESSAGE);
         String answerRecieved = Console.readLine();
         return validateGameNum(answerRecieved);
     }
 
-    private void validateRestartNum(String restartNum){
-        if(restartNum.length() >1)
+    private void validateRestartNum(String restartNum) {
+        if (restartNum.length() > 1)
             throw new IllegalArgumentException("입력한 숫자의 길이가 너무 깁니다");
-        if( restartNum.charAt(0)!=49 && restartNum.charAt(0)!=50 )
+        if (restartNum.charAt(0) != 49 && restartNum.charAt(0) != 50)
             throw new IllegalArgumentException("숫자가 1또는 2가 아닙니다");
     }
 
-    private List<Integer> validateGameNum(String gameNum){
+    private List<Integer> validateGameNum(String gameNum) {
         if (gameNum.length() != GAME_LENGTH) {
             throw new IllegalArgumentException(String.format("%d 자리가 아닙니다.", GAME_LENGTH));
         }

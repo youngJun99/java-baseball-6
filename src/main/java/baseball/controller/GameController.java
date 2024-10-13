@@ -30,14 +30,14 @@ public class GameController {
         boolean token = true;
         while(token){
 
-            boolean win = false;
+            boolean isWin = false;
             answerNumber = randomNumberGenarator.generateRandNum();
 
-            while(!win){
+            while(!isWin){
                 List<Integer> playerGuess = inputManager.printAnswerRecieveMessage();
                 List<Integer> score = scoreValidator.validateAnswer(answerNumber,playerGuess);
                 resultView.printScore(score);
-                win = winValidator.winValidation(score);
+                isWin = winValidator.winValidation(score);
             }
 
             token = inputManager.printRestartMessage();
