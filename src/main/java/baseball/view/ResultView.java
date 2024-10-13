@@ -4,7 +4,7 @@ import baseball.controller.InputManager;
 
 import java.util.List;
 
-public class resultView {
+public class ResultView {
 
     private static final String WIN_MESSAGE = "%d개의 숫자를 모두 맞히셨습니다! 게임종료";
 
