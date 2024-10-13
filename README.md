@@ -1,3 +1,20 @@
+# 프로젝트 기능 요구사항
+
+- InputManager가 게임 진행과 입력 값에 대한 안내를 진행한다.
+````
+- [ ] 게임을 계속 진행할 것인지에 대한 문구가 구현되고 1과 2만을 받아야 한다.
+- [ ] 답을 작성하는 문구가 구현되고 답은 반드시 요구한 길이에 부합해야 한다.
+- [ ] 답은 1과 9 사이의 '숫자' 로만 작성되어야 한다.
+- [ ] 사용자가 잘못된 값을 입력할 경우 IlliegalArgumentException을 발생시키고 오류 이유를 남길 것
+````
+
+- GameManager
+
+````
+- [ ] 중복되지 않고 답의 요구 길이에 부합한 답을 만들어 낸다
+- [ ] 사용자가 입력한 답과 답을 비교 한다 
+````
+
 # 미션 - 숫자 야구
 
 ## 🔍 진행 방식
@@ -142,3 +159,4 @@ while (computer.size() < 3) {
 - 미션은 [java-baseball-6](https://github.com/woowacourse-precourse/java-baseball-6) 저장소를 Fork & Clone해 시작한다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가한다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 문서를 참고한다.
+
