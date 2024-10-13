@@ -7,7 +7,9 @@ public class ScoreValidator {
 
     public List<Integer> validateAnswer(List<Integer> answer, List<Integer> guess) {
 
-        List<Integer> answerResult = List.of(0, 0);
+        List<Integer> answerResult = new ArrayList<>();
+        answerResult.add(0);
+        answerResult.add(0);
 
         for (int i = 0; i < answer.size(); i++) {
             if (answer.get(i) == guess.get(i))
